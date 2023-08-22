@@ -18,7 +18,7 @@ consoleLogCounter++;
 
 // Type Coercion
 // JavaScript fortolker typer. Eksempelvis bliver number fortolket til string når du plusser med en String:
-// 2 + "2" = 22
+// 2 + "2" = 22 
 
 // The 3 ways to make strings
 // If I need single quotes:
