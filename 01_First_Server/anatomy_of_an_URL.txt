@@ -1,0 +1,12 @@
+
+
+https://www.google.com/seach?hl=en&q=test
+protocol://subdomain.domain.topleveldomain/endpoint?querystring
+
+
+querystring
+?hl=en&q=test
+    queryparameters
+
+/search/1
+       path variable

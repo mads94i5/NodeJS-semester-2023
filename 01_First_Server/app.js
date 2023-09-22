@@ -1,10 +1,12 @@
 // import express
-// const express = require("express");
+const express = require("express");
 // instantiate express
-// const app = express();
+const app = express();
 
 // one-line
-const app = require("express")();
+//const app = require("express")();
+
+app.use(express.json());
 
 const otherData = 123;
 
@@ -16,12 +18,17 @@ app.get("/", (req, res) => {
 const dogObject = { dog1: "Woof", dog2: "Vov" }
 
 app.get("/dog", (req, res) => {
-    res.send(dogObject);
+    res.send({ data: dogObject });
 });
 
 app.get("/dog/:id", (req, res) => {
     console.log(dogObject[req.params.id]);
-    res.send(dogObject[req.params.id]);
+    res.send({ data: dogObject[req.params.id] });
+});
+
+app.get("/cat", (req, res) => {
+    console.log(req.query);
+    res.send({ data: req.query });
 });
 
 let balance = 100;
@@ -32,6 +39,15 @@ app.get("/wallet/:withdrawalAmount", (req, res) => {
         balance -= req.params.withdrawalAmount;
         res.send({ message: `You've withdrawn ${req.params.withdrawalAmount}`});
     }
+});
+
+app.post("/giveMeTheBody", (req, res) => {
+    console.log(req.body);
+    res.send(req.body);
+})
+
+app.get("/pirate", (req, res) => {
+    res.send({ message: "yes" });
 });
 
 // 80 http
