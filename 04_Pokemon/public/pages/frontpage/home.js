@@ -20,7 +20,7 @@ async function getPokemon(pokemonId) {
     })
     .then((result) => {
         console.log(result);
-        pokemonName.innerText = result.name;
+        pokemonName.innerText = result.name.substring(0, 1).toUpperCase() + result.name.substring(1);
         pokemonImgDiv.innerHTML = `<img src="${result.sprites.other.home.front_default}">`;
     })
     .catch((err) => {
