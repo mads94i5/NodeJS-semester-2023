@@ -27,7 +27,7 @@ async function getPokemon(pokemonId) {
         pokemon = {
             name: result.name.substring(0, 1).toUpperCase() + result.name.substring(1),
             img: result.sprites.other.home.front_default,
-            strength: randomIntFromInterval(1, 10)
+            strength: randomIntFromInterval(2, 10)
         }
         return pokemon;
     })
