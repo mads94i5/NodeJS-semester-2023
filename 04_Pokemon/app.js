@@ -1,10 +1,11 @@
 import express from "express";
 const app = express();
-import path from "path";
+// import path from "path";
 import * as routes from "./util/routes.js";
 import { battlePokemon } from "./public/assets/scripts/battlepokemon.js";
 
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
     res.send(routes.homePage);
@@ -20,6 +21,11 @@ app.get("/battle", (req, res) => {
 app.get("/contact", (req, res) => {
     res.send(routes.contactPage);
     // res.sendFile(path.resolve("./public/pages/contact/contact.html"));
+});
+
+app.post("/contact", (req, res) => {
+    console.log("Ok thanks for your input!", req.body);
+    res.send("Ok thanks for your input!");
 });
 
 // ############### Routes ###############
