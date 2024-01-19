@@ -1,0 +1,28 @@
+MySQL vs. MongoDB
+---------------------------
+relationel vs unstructured
+production vs prototype
+database vs database
+table vs collection
+row vs document (json)
+column vs key
+cell vs value
+
+SHOW DATABASES vs show dbs
+CREATE <database_name> vs use <database_name>
+CREATE TABLE <table_name> vs db.createCollection("<collection_name>")
+INSERT vs insertOne, insertMany
+SELECT vs find, findOne
+UPDATE vs updateOne, updateMany ({ <search_criteria> }, { $set: { <update_width> }})
+DELETE vs deleteOne, deleteMany
+
+// MongoDB how to have foreign keys
+Solution 1:
+Have a key in the object in collection 1 and have that key be a unique identifier to a document in collection 2.
+
+Solution 2:
+Denormalization; deeply nested objects
+Duplicated code is okay
+
+
+
