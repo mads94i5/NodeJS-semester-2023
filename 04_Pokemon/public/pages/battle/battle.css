@@ -1,0 +1,10 @@
+
+body {
+    min-height: 94vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

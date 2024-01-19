@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axios": "^1.6.2",
+    "periodic-table": "^0.0.8"
+  }
+}

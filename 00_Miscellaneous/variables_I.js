@@ -12,7 +12,7 @@ consoleLogCounter++;
 
 // Types/Data konstrukt:
 // Data typer:
-// String, Number, Boolean, BigInteger, undefined, null, Object, Symbol
+// String, Number, Boolean, BigInteger, undefined, null, Symbol
 // Data strukturer:
 // Object: Object, Array, Date
 

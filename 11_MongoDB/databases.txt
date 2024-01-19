@@ -1,0 +1,22 @@
+########
+Relational
+MySQL, Sqlite, H2, MsSQL, PostgreSQL, Cassandra, MariaDB, CouchDB
+
+
+
+########
+NoSQL
+
+Document
+---------
+MongoDB
+Firebase
+
+Graph
+---------
+Neo4J
+DynamoDB
+
+Object
+---------
+Realm

@@ -24,7 +24,7 @@ const two = 45;
 const three = 98;
 
 // Show in the console the avg. with 5 decimals
-const average = parseFloat((one+two+three)/3).toFixed(5);
+const average = parseFloat((one + two + three) / 3).toFixed(5);
 console.log(average);
 // --------------------------------------
 // Exercise 6 - Get the character by index
@@ -33,7 +33,7 @@ const letters = "abc";
 
 // Get me the character "c"
 
-const lastLetter = letters.charAt(letters.length-1);
+const lastLetter = letters.charAt(letters.length - 1);
 console.log(lastLetter);
 // --------------------------------------
 // Exercise 7 - Replace

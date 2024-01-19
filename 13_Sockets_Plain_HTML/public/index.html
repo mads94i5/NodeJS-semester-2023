@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colours</title>
+</head>
+<body>
+    <h1>Colours</h1>
+
+    <input id="colour-picker" type="color">
+    <button onclick="printColour()">Submit</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        // task console.log the color value when the use chooses a colour
+        // task try to do it without a button otherwise use a button
+        const colourPicker = document.getElementById("colour-picker");
+
+        function printColour() {
+            // console.log(colourPicker.value);
+            socket.emit("client-selected-colour", { data: colourPicker.value });
+        }
+
+        socket.on("server-sent-colour", (data) => {
+            document.body.style.backgroundColor = data.data;
+        });
+    </script>
+</body>
+</html>
